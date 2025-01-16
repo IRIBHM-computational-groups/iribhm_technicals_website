@@ -1,0 +1,7 @@
+* [Home](/)
+    * [New in Labs ?](start/welcome.md)
+        * [Welcome](start/welcome.md)
+        * [Working with Hyperion](start/working_with_hyperion.md)
+        * [Singularity](start/singularity.md)
+    * [Tips](tips/GCP.md)
+        * [Good computational practices](tips/GCP.md)
