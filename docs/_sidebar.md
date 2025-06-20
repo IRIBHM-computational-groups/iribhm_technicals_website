@@ -1,5 +1,5 @@
 * [Home](/)
-    * [New in Labs ?](start/welcome.md)
+    * [New in Labs ?](start/newcomers.md)
         * [Welcome](start/newcomers.md)
         * [Working with Hyperion](start/working_with_hyperion.md)
         * [Singularity](start/singularity.md)
