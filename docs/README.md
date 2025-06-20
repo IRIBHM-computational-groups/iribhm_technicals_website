@@ -1,4 +1,10 @@
-# IRIBHM Documentation
+# IRIBHM Internal Documentation
 
-This website give all the documentation needed to works at [IRIBHM Computational Labs](https://iribhm-computational-groups.github.io/).
+
+
+
+This is the internal website for our documentation.
+
+
+Please browe the differents sections on the side bar.
 
