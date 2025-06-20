@@ -9,7 +9,7 @@ This page use [Docsify](https://docsify.js.org/#/?id=docsify) which is a framewo
 
 1. Install Docsify `npm i docsify-cli -g` (Maybe sudo)
 2. clone this repo `git clone git@github.com:Benoitdw/iribhm_website.git`
-3. `docsify serve iribhm_website` 
+3. `docsify serve iribhm_website/docs` 
 4. You can now live preview all your change in `http://localhost:3000`
 
 
