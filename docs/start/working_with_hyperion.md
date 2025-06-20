@@ -10,6 +10,8 @@ Connection steps are described in [here](https://support.ulb.be/fr/web/support/-
 > [!NOTE]
 > If you using Linux you can set up your VPN with [this link](https://support.ulb.be/fr/web/support/-/how-to-connect-to-ulb-global-protect-vpn-on-linux-?inheritRedirect=true&redirect=%2Ffr%2Fweb%2Fsupport%2F-%2Fcomment-utiliser-ulb-vpn-) 
 
+You also have to be registered as a user, ask Vincent for this.
+
 Once connected to the VPN, different options are available to you as listed below. Keep in mind that notebooks such as jupyter are designed to facilitate exploratory data analysis mixing code, outputs and comments. When running resource-intensive tasks or heavy pipelines that are designed to produce defined results without user inputs, terminal multiplexers such as screen or tmux should be preferred. 
 
 <!-- tabs:start -->
@@ -52,3 +54,5 @@ os.environ["NUMEXPR_NUM_THREADS"] = "10" # export NUMEXPR_NUM_THREADS=4
 
 For R you can add the `unix` package to your containers and use to `rlimit_as` and `rlimit_nproc` functions with the `cur` argument. Those will interupt a function if gets too greedy without killing the whole process.
 
+## Data storage
+TODO: rules and tips
