@@ -19,6 +19,17 @@ Once connected to the VPN, different options are available to you as listed belo
 Your ulbid is the same as the one used to connect to the "Virtual University".
 The URL depend on the server you want to connect to, as shown above. 
 
+
+| Name    | Adress                        | Note                                                                                                                                                                                                                            |
+| ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Himm    | iribhm-himm01.hpda.ulb.ac.be  | Packed with numerous CPUs, the Himm server is a computational powerhouse, although it doesn't house GPUs. Ideal for CPU-intensive tasks                                                                                         |
+| GPU01   | iribhm-gpu01.hpda.ulb.ac.b    | Equipped with both CPUs and GPUs, GPU01 is your go-to for tasks that demand the parallel processing might of graphical processing units.                                                                                        |
+| GPU02   | iribhm-gpu02.hpda.ulb.ac.b    | Equipped with both CPUs and GPUs, GPU01 is your go-to for tasks that demand the parallel processing might of graphical processing units.                                                                                        |
+| GPU03   | iribhm-gpu03.hpda.ulb.ac.b    | Equipped with both CPUs and GPUs, GPU01 is your go-to for tasks that demand the parallel processing might of graphical processing units.                                                                                        |
+| Builder | iribhm-builder.hpda.ulb.ac.be | Dedicated to the construction of containers (a topic well delve into [here](start/singularity)), the Builder server plays a crucial role in crafting environments tailored to your specific needs. Accessible via command line only. |
+
+
+
 ### **Jupyter Lab Interface**
 Just paste the link provided above in your browser and connect with your ulb credentials.
 <!-- tabs:end -->
