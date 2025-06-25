@@ -56,12 +56,21 @@ Personal or development containers can be built in your home folder on the build
 ### Enabling the newly created container
 Once a container has been created on the builder VM it can be copied on the production VMs (himm and the 3 GPU VMs) using a command such as rsync or scp. You can copy them on the IRIBHM mount which is shared among those 4 VMs, either in your home folder or in the shared singularity folder : `/mnt/iribhm/software/singularity`
 
-Once they are copied they can be used directly with the command line. If you wish to use them on jupyterlab you must create a new kernel for this container. Kernels are stored in `${HOME}/.local/share/jupyter/kernels`. You may need to create this folder the first time :
+Once they are copied they can be used directly with the command line like this:
+``` bash
+apptainer shell /mnt/iribhm/software/singularity/my_apptainer.sif
+```
+
+ If you wish to use them on jupyterlab you must create a new kernel for this container. If you only want this kernel to show up on your home screen, store its settings folder here: `${HOME}/.local/share/jupyter/kernels`. You may need to create this folder the first time :
 ```bash
 mkdir -p ${HOME}/.local/share/jupyter/kernels
 ```
+
+To share your kernel with everybody, store its settings folder to `/opt/local/jupyter/kernels/`.
+
 Each kernel is composed of a folder (named as you wish) containing at least a kernel.json file. You can adapt one of the examples kernel files provided below (depending on whether you want R or python). To do so just edit the path to your container in the kernel.json file as well as the display_name variable, which is the name that will be displayed in the jupyterlab interface. You may also need to adapt the path to the executable in your container. 
 
+***Python example***
 ```json
 { 
  "argv": ["/usr/bin/singularity", 
@@ -77,7 +86,10 @@ Each kernel is composed of a folder (named as you wish) containing at least a ke
  "display_name": "Cell2Loc",
  "language": "python"
 }
+```
 
+***R example***
+```
 {
   "argv": ["/usr/bin/singularity",
     "exec",
@@ -95,4 +107,12 @@ Each kernel is composed of a folder (named as you wish) containing at least a ke
 }
 ```
 
-Something else to keep in mind when building your container is that if you want to use it with jupyterlab you'll need to install an extra packages to do so, IRkernel for R and ipykernel for python.
+Something else to keep in mind when building your container is that if you want to use it with jupyterlab you will need to install an extra packages to do so, IRkernel for R and ipykernel for python.
+
+Optionally, you can give your kernel a logo in the form of an image or a gif. Save it in the kernel directory as `logo-32x32` or `logo-64x64`, with extension '.png' or '.gif', like this:
+```
+/opt/local/jupyter/kernels/  
+└───my_kernel
+    └───kernel.json
+    └───logo-64x64.png
+```
