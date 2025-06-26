@@ -62,27 +62,27 @@ Another major speedup comes from SSH keys. They allow secure, password-less conn
 
 The file `${HOME}/.bashrc` is automatically sourced every time you start a terminal. You can use it to define helper functions, variables, or automate tasks.
 
-Define aliases:
+### Define aliases:
 
 ```bash
 alias csi='cd /mnt/iribhm/software/singularity'
 alias singuR='singularity exec /mnt/iribhm/homes/atourneu/r_full.sif R'
 ```
 
-Set a variable:
+### Set a variable:
 
 ```bash
 export PATH=${PATH}:/mnt/iribhm/software/bin
 ```
 
-Automate tasks at each terminal startup:
+### Automate tasks at each terminal startup:
 
 ```bash
 chmod -R 750 ${HOME}
 chmod 600 ${HOME}/.ssh/*
 ```
 
-Backup your code with Git:
+### Backup your code with Git:
 
 ```bash
 eval $(ssh-agent)
@@ -93,11 +93,33 @@ git commit -m "$(date)"
 git push
 ```
 
-Automate storage checks for `/mnt/iribhm` saturation:
+### Automate storage checks for `/mnt/iribhm` saturation:
+
 
 ```bash
-PERCENTIRIBHM=`df -k /mnt/iribhm | grep "/mnt/iribhm" | awk '{print $(NF-1)}'`
-if [ ${PERCENTIRIBHM::-1} -gt 95 ]; then 
-  echo '### WARNING ### IRIBHM STORAGE HAS REACHED 95 PERCENT CAPACITY ### CLEANING IS ADVISED'; 
+#!/bin/bash
+
+# Get the disk usage percentage for the specified mount point
+USAGE=$(df /mnt/iribhm | grep /mnt/iribhm | awk '{ print $5 }' | sed 's/%//g')
+if [ "$USAGE" -gt 95 ]; then
+    # Prepare the warning message
+    MESSAGE="Warning: Disk usage is at ${USAGE}% on $(hostname) for /mnt/iribhm. Please take action!"
+
+    # Echo the message in red
+    echo -e "\e[31m$MESSAGE\e[0m"
+# Check if the usage is greater than 90% but less than or equal to 95%
+elif [ "$USAGE" -gt 90 ]; then
+    # Prepare the caution message
+    CAUTION_MESSAGE="Caution: Disk usage is at ${USAGE}% on $(hostname) for /mnt/iribhm. Please monitor the situation."
+
+    # Echo the message in yellow
+    echo -e "\e[33m$CAUTION_MESSAGE\e[0m"
 fi
+```
+(You can add this script in a file and call it when you login by add it in your .bashrc)
+
+```bash
+YOUR_SCRIPT="path_to_your_script.sh"
+chmod +x $YOUR_SCRIPT
+echo "$YOUR_SCRIPT" >> ~/.bashrc
 ```

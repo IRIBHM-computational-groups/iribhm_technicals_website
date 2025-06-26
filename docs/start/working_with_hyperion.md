@@ -17,6 +17,9 @@ You also have to be registered as a user, ask Vincent for this.
 
 Once connected to the VPN, different options are available to you as listed below. Keep in mind that notebooks such as jupyter are designed to facilitate exploratory data analysis mixing code, outputs and comments. When running resource-intensive tasks or heavy pipelines that are designed to produce defined results without user inputs, terminal multiplexers such as screen or tmux should be preferred. 
 
+<!-- tabs:start -->
+
+### **Command Line Interface**
 
 `ssh ulbid@<url>`
 
@@ -30,6 +33,12 @@ The URL depend on the server you want to connect to, as shown above.
 | GPU02   | iribhm-gpu02.hpda.ulb.ac.b    | Equipped with both CPUs and GPUs, GPU01 is your go-to for tasks that demand the parallel processing might of graphical processing units.                                                                                             | [link](https://iribhm-gpu02.hpda.ulb.ac.be:8000/jupyter/hub/login)  |
 | GPU03   | iribhm-gpu03.hpda.ulb.ac.b    | Equipped with both CPUs and GPUs, GPU01 is your go-to for tasks that demand the parallel processing might of graphical processing units.                                                                                             | [link](https://iribhm-gpu03.hpda.ulb.ac.be:8000/jupyter/hub/login)  |
 | Builder | iribhm-builder.hpda.ulb.ac.be | Dedicated to the construction of containers (a topic well delve into [here](start/singularity)), the Builder server plays a crucial role in crafting environments tailored to your specific needs. Accessible via command line only. | /                                                                   |
+
+### **Jupyter Lab Interface**
+
+Just paste the link provided above in your browser and connect with your ulb credentials.
+
+<!-- tabs:end -->
 
 ## Working together on Hyperion
 
