@@ -13,12 +13,26 @@ Here is a list of useful commands that you'll find on most Linux distributions. 
 - `chmod` – Define permissions for a file/folder  
 - `df` – Statistics on disks  
 - `du` – Evaluate folder/file size (do **not** use on `/mnt/iribhm`)  
-- `getfattr -n ceph.dir.rbytes /mnt/iribhm/blabla` – Evaluate size of folder on `/mnt/iribhm`
+- `numfmt --to iec --format "%8.4f" $(getfattr -n ceph.dir.rbytes --only-values /absolute/path/to_directory )` – Evaluate size of folder on `/mnt/iribhm`
 
 Example usage to list folder sizes in `/mnt/iribhm`:
 
 ```bash
-for i in $(ls /mnt/iribhm); do getfattr -n ceph.dir.rbytes /mnt/iribhm/$i; done
+# Iterate over items in /mnt/iribhm
+for i in $(ls /mnt/iribhm); do 
+    # Get the size attribute for the item
+    SIZE=$(getfattr -n ceph.dir.rbytes --only-values /mnt/iribhm/$i 2>/dev/null)
+    
+    # Check if the size is available
+    if [ -n "$SIZE" ]; then
+        # Format the size in human-readable format
+        FORMATTED_SIZE=$(numfmt --to=iec --format="%8.4f" "$SIZE")
+        # Output the folder name and its size
+        echo "$i: $FORMATTED_SIZE"
+    else
+        echo "No size attribute for $i"
+    fi
+done
 ```
 
 ---
