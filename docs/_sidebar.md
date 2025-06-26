@@ -3,6 +3,7 @@
         * [Welcome](start/newcomers.md)
         * [Working with Hyperion](start/working_with_hyperion.md)
         * [Singularity](start/singularity.md)
+        * [Ressources](start/ressources.md)
     * [Tips](tips/GCP.md)
         * [Good computational practices](tips/GCP.md)
         * [Tips and tricks](tips/tips_and_tricks.md)
