@@ -1,7 +1,7 @@
 # Singularity Containers  
 
 ## What are singularity containers ? 
-Singularity containers allow you to run your analyses in a reproducible manner on Hyperion. They are comparable to docker containers, except that they are designed to operate on scientific clusters such as Hyperion. You can consider them as a variant of virtual machines except that their goal is to isolate applications and not computer resources. They are also easier to create and use than virtual machines. The project was originally named Singularity but it was split in november 2021 in two separate entities, and the one we use is called Apptainer. Yet the apptainer and singularity commands can both be used interchangeably. The official documentation can be found on [apptainer's website](https://apptainer.org/documentation/)
+Singularity containers allow you to run your analyses in a reproducible manner on Hyperion. They are comparable to docker containers, except that they are designed to operate on scientific clusters such as Hyperion. You can consider them as a variant of virtual machines except that their goal is to isolate applications and not computer resources. They are also easier to create and use than virtual machines. The project was originally named Singularity but it was split in november 2021 in two separate entities, and the one we use is called Apptainer. Yet the apptainer and singularity commands can both be used interchangeably. The official documentation can be found on the [apptainer website](https://apptainer.org/documentation/)
 
 To verify the version currently installed on Hyperion you can use the command :
 ```bash
@@ -48,7 +48,7 @@ With the command line they can be used interactively (e.g. apptainer shell) or n
 ### Creating a new container on the builder VM
 Containers are built on the builder VM using the "apptainer build" command. You always build a new container upon a pre-existing one, whether it is online or from one of yours. The proper way to build containers is to use definition files. These definition files are text files containing a set of instructions, very similar to the commands you would enter in your terminal to install software on a linux machine. The structure of those definition files and the proper way to use the build command is described [here](https://apptainer.org/docs/user/latest/build_a_container.html).
 
-Personal or development containers can be built in your home folder on the builder VM. If you want to share the definition file of one of your containers, you can put it in the `/opt/common` folder of the builder VM. This folder contains a git repository that is set up to sync all files with the .def extension to the team's github group.
+Personal or development containers can be built in your home folder on the builder VM. If you want to share the definition file of one of your containers, you can put it in the `/opt/common` folder of the builder VM. This folder contains a git repository that is set up to sync all files with the .def extension to the team github group.
 
 >[!NOTE]
 >sandboxes can be useful for debugging purposes when creating complex containers but they are not reproducible, use them at your own risks. If you have to use them, make sure that you track the changes you made in a separate text file.
