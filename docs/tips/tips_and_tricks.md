@@ -9,10 +9,10 @@ Here is a list of useful commands that you'll find on most Linux distributions. 
 - `killall -u ${USER}` – Kill all your processes, to clean up  
 - `kill` – When a process stops responding (or use `killall`)  
 - `screen` or `tmux` – Terminal multiplexers, keep your processes running in background  
-- `rsync` or `scp` – Transfer files or folders between machines  
+- `rsync` or `scp` – Transfer files or folders between machines. `scp` is a simple copy paste and is typically used for small things. `rsync` has some optimizations such as only sending over new files and has many customization options, it is typically used for recurring transfers.
 - `chmod` – Define permissions for a file/folder  
 - `df` – Statistics on disks  
-- `du` – Evaluate folder/file size (do **not** use on `/mnt/iribhm`)  
+- `du` – Evaluate folder/file size (do **not** use on multi-terabyte folders like `/mnt/iribhm`, you will clog up and maybe even crash the server)
 - `numfmt --to iec --format "%8.4f" $(getfattr -n ceph.dir.rbytes --only-values /absolute/path/to_directory )` – Evaluate size of folder on `/mnt/iribhm`
 
 Example usage to list folder sizes in `/mnt/iribhm`:

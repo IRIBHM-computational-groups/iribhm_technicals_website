@@ -9,6 +9,7 @@ This page use [Docsify](https://docsify.js.org/#/?id=docsify) which is a framewo
 3. `docsify serve iribhm_website/docs` 
 4. You can now live preview all your change in `http://localhost:3000`
 
+Pages are written in [Markdown](https://www.markdownguide.org/cheat-sheet/) format. This is a simple syntax typically also used for README files. 
 
 ## Deployment
 
