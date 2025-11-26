@@ -6,6 +6,7 @@
         * [Resources](start/resources.md)
         * [Databases](start/databases.md)
         * [Rules](start/server_rules.md)
+        * [Large language models](start/large_language_models.md)
     * [Tips](tips/GCP.md)
         * [Good computational practices](tips/GCP.md)
         * [Tips and tricks](tips/tips_and_tricks.md)
