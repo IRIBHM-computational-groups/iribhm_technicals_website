@@ -32,6 +32,22 @@
 	height: 2.25rem;
 }
 
+/* The hero carries no image, so it stays a single centred column at every width
+   instead of Starlight's two-column (text + image) split. */
+.hero {
+	grid-template-columns: 100%;
+}
+.hero .copy,
+.hero .actions {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.hero .tagline {
+	max-width: 44rem;
+	margin-inline: auto;
+}
+
 /* Brand lime accent under the hero title */
 .hero h1::after {
 	content: '';
@@ -42,15 +58,6 @@
 	border-radius: 1rem;
 	background: #a9c800;
 }
-@media (min-width: 50rem) {
-	.hero h1::after {
-		margin-inline: 0;
-	}
-}
-.hero > img {
-	max-width: 14rem;
-}
-
 /* Logo download grid on the resources page */
 .logo-grid {
 	display: grid;
