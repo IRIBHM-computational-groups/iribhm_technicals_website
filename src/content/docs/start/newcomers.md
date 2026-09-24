@@ -5,10 +5,11 @@ title: "New Lab Member Onboarding Checklist"
 Here is a list of information that should be communicated to a new lab member by his/her tutor within the first weeks of his/her arrival:
 
 - [ ] **Office & lab tours**: Show the 4 offices and 2 labs, make presentations.
-- [ ] **Access card**: Supplied at the library, linked on MonULB, activated by Genevieve Dalle.
-- [ ] **Office key**: Ask Genevieve Dalle.
-- [ ] **Add to IRIBHM mailing list**: Contact Genevieve Dalle or Sabine Costagliola.
+- [ ] **Access card**: Supplied at the library, linked on MonULB, activated by [Tahir Abuali](mailto:tahir.abuali@ulb.be).
+- [ ] **Office key**: Ask [Tahir Abuali](mailto:tahir.abuali@ulb.be).
+- [ ] **Add to IRIBHM mailing list**: Contact [Tahir Abuali](mailto:tahir.abuali@ulb.be) or [Sabine Costagliola](mailto:Sabine.Costagliola@ulb.be).
 - [ ] **Verify if person was added to Teams groups** (GRP_IRIBHM Computational Biology + project-specific ones).
+- [ ] **Add the person to `/Share/presentations/ordre_of_presentation.xlsx` on Teams**, both to the presentation rota and to a grand-tour team (A or B). See [Lab activities](../lab_activities/).
 - [ ] **Connect laptop to copier and try printing something**: Ask Joelle Sente for personal password.
 - [ ] **Ordering of office materials (e.g. work laptop)**: [ULB Official Suppliers](https://portail.ulb.be/fr/finances-achats-et-comptabilite/achats-et-magasins-generaux/achats/fournisseurs-officiels-de-l-ulb).
 - [ ] **Add person to our "Meet the Team" page** and ensure they are listed on the general IRIBHM website.

@@ -29,6 +29,7 @@ export default defineConfig({
 					label: 'New in the lab?',
 					items: [
 						{ label: 'Welcome', slug: 'start/newcomers' },
+						{ label: 'Lab activities', slug: 'start/lab_activities' },
 						{ label: 'Working with Hyperion', slug: 'start/working_with_hyperion' },
 						{ label: 'Singularity', slug: 'start/singularity' },
 						{ label: 'Resources', slug: 'start/resources' },
