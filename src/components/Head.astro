@@ -1,0 +1,13 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Default><slot /></Default>
+<!-- Redirect old docsify hash URLs (e.g. /#/start/newcomers) to their new path. -->
+<script is:inline define:vars={{ base }}>
+	if (location.hash.startsWith('#/')) {
+		const path = location.hash.slice(2).replace(/\.md$/, '').replace(/\/$/, '').toLowerCase();
+		location.replace(`${base}/${path}${path ? '/' : ''}`);
+	}
+</script>

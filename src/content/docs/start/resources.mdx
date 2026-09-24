@@ -1,0 +1,40 @@
+---
+title: Resources
+description: IRIBHM logos and other shared resources.
+---
+
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+export const logos = [
+	{ name: 'iribhm-logo', label: 'Logo' },
+	{ name: 'iribhm-logo-ondark', label: 'Logo (on dark)', dark: true },
+	{ name: 'iribhm-symbol', label: 'Symbol' },
+	{ name: 'iribhm-symbol-ondark', label: 'Symbol (on dark)', dark: true },
+];
+export const formats = [
+	['SVG', 'SVG-Vector', 'svg'],
+	['PNG', 'PNG', 'png'],
+	['JPEG', 'JPEG', 'jpg'],
+	['PDF', 'PDF', 'pdf'],
+	['EPS', 'EPS-Vector', 'eps'],
+];
+
+## Logos
+
+Download the IRIBHM logo in the format you need. Use the vector formats (SVG, PDF, EPS) for posters and print.
+
+<div class="logo-grid not-content">
+	{logos.map((logo) => (
+		<figure>
+			<div class={logo.dark ? 'preview dark' : 'preview'}>
+				<img src={`${base}/resources/logos/SVG-Vector/${logo.name}.svg`} alt={`IRIBHM ${logo.label}`} />
+			</div>
+			<figcaption>
+				<strong>{logo.label}</strong>
+				<br />
+				{formats.map(([label, dir, ext]) => (
+					<a href={`${base}/resources/logos/${dir}/${logo.name}.${ext}`} download>{label}</a>
+				))}
+			</figcaption>
+		</figure>
+	))}
+</div>

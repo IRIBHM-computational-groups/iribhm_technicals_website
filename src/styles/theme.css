@@ -1,0 +1,89 @@
+/* IRIBHM brand: lime #A9C800, dark teal #09272B */
+:root {
+	--sl-color-accent-low: #26300a;
+	--sl-color-accent: #8fa800;
+	--sl-color-accent-high: #dcef8a;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #e3eced;
+	--sl-color-gray-2: #b9c8ca;
+	--sl-color-gray-3: #83999c;
+	--sl-color-gray-4: #4f6568;
+	--sl-color-gray-5: #2f4447;
+	--sl-color-gray-6: #16333a;
+	--sl-color-black: #09272b;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #eef5c7;
+	--sl-color-accent: #5c6f00;
+	--sl-color-accent-high: #2f3a00;
+	--sl-color-white: #09272b;
+	--sl-color-gray-1: #16333a;
+	--sl-color-gray-2: #2f4447;
+	--sl-color-gray-3: #4f6568;
+	--sl-color-gray-4: #83999c;
+	--sl-color-gray-5: #b9c8ca;
+	--sl-color-gray-6: #e3eced;
+	--sl-color-gray-7: #f3f7f7;
+	--sl-color-black: #ffffff;
+}
+
+.site-title img {
+	height: 2.25rem;
+}
+
+/* Brand lime accent under the hero title */
+.hero h1::after {
+	content: '';
+	display: block;
+	width: 4rem;
+	height: 0.35rem;
+	margin: 1rem auto 0;
+	border-radius: 1rem;
+	background: #a9c800;
+}
+@media (min-width: 50rem) {
+	.hero h1::after {
+		margin-inline: 0;
+	}
+}
+.hero > img {
+	max-width: 14rem;
+}
+
+/* Logo download grid on the resources page */
+.logo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+	gap: 1rem;
+}
+.logo-grid figure {
+	margin: 0;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+.logo-grid .preview {
+	display: grid;
+	place-items: center;
+	height: 8rem;
+	padding: 1rem;
+	background: #ffffff;
+}
+.logo-grid .preview.dark {
+	background: #09272b;
+}
+.logo-grid .preview img {
+	max-width: 100%;
+	max-height: 6rem;
+	object-fit: contain;
+	margin: 0;
+}
+.logo-grid figcaption {
+	padding: 0.5rem 0.75rem;
+	font-size: var(--sl-text-sm);
+}
+.logo-grid figcaption a {
+	margin-inline-end: 0.6rem;
+	color: var(--sl-color-text-accent);
+}

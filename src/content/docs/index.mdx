@@ -1,0 +1,49 @@
+---
+title: IRIBHM Internal Documentation
+description: Technical documentation of the IRIBHM computational groups — the Hyperion cluster, containers, good practices and more.
+template: splash
+hero:
+  tagline: Everything you need to compute on Hyperion, build containers, and work reproducibly in the IRIBHM computational groups.
+  image:
+    file: ../../assets/symbol.svg
+  actions:
+    - text: New in the lab? Start here
+      link: /iribhm_technicals_website/start/newcomers/
+      icon: right-arrow
+    - text: Connect to Hyperion
+      link: /iribhm_technicals_website/start/working_with_hyperion/
+      icon: laptop
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+## Get started
+
+<CardGrid>
+	<LinkCard title="Onboarding checklist" description="What your tutor should walk you through in your first weeks." href={`${base}/start/newcomers/`} />
+	<LinkCard title="Working with Hyperion" description="Servers, VPN, SSH and JupyterLab access." href={`${base}/start/working_with_hyperion/`} />
+	<LinkCard title="Singularity containers" description="Build, share and use Apptainer containers and Jupyter kernels." href={`${base}/start/singularity/`} />
+	<LinkCard title="Server rules" description="Read this before running anything heavy on the cluster." href={`${base}/start/server_rules/`} />
+</CardGrid>
+
+## Going further
+
+<CardGrid>
+	<Card title="Good practices" icon="approve-check">
+		Backups, git and readable code. <a href={`${base}/tips/gcp/`}>Good computational practices</a>
+	</Card>
+	<Card title="Tips and tricks" icon="seti:shell">
+		`htop`, `screen`, `killall`, `getfattr` and friends. <a href={`${base}/tips/tips_and_tricks/`}>Tips and tricks</a>
+	</Card>
+	<Card title="Data" icon="seti:db">
+		Where the public databases (GTEx, TCGA, …) live. <a href={`${base}/start/databases/`}>Databases</a>
+	</Card>
+	<Card title="Resources" icon="puzzle">
+		IRIBHM logos in every format. <a href={`${base}/start/resources/`}>Resources</a>
+	</Card>
+</CardGrid>
+
+This is a living document — every page has an **Edit page** link at the bottom. Feel free to update it and add useful information.
