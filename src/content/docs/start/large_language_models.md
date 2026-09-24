@@ -1,4 +1,6 @@
-# Large language models in our lab
+---
+title: "Large language models in our lab"
+---
 
 ## L33t retreat 2025-11-26
 

@@ -1,4 +1,6 @@
-# Tips and tricks
+---
+title: "Tips and tricks"
+---
 
 ## Useful Commands
 

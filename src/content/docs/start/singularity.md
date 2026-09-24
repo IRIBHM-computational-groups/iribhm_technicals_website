@@ -1,4 +1,6 @@
-# Singularity Containers  
+---
+title: "Singularity Containers"
+---
 
 ## What are singularity containers ? 
 Singularity containers allow you to run your analyses in a reproducible manner on Hyperion. They are comparable to docker containers, except that they are designed to operate on scientific clusters such as Hyperion. You can consider them as a variant of virtual machines except that their goal is to isolate applications and not computer resources. They are also easier to create and use than virtual machines. The project was originally named Singularity but it was split in november 2021 in two separate entities, and the one we use is called Apptainer. Yet the apptainer and singularity commands can both be used interchangeably. The official documentation can be found on the [apptainer website](https://apptainer.org/documentation/)
@@ -50,8 +52,9 @@ Containers are built on the builder VM using the "apptainer build" command. You 
 
 Personal or development containers can be built in your home folder on the builder VM. If you want to share the definition file of one of your containers, you can put it in the `/opt/common` folder of the builder VM. This folder contains a git repository that is set up to sync all files with the .def extension to the team github group.
 
->[!NOTE]
->sandboxes can be useful for debugging purposes when creating complex containers but they are not reproducible, use them at your own risks. If you have to use them, make sure that you track the changes you made in a separate text file.
+:::note
+sandboxes can be useful for debugging purposes when creating complex containers but they are not reproducible, use them at your own risks. If you have to use them, make sure that you track the changes you made in a separate text file.
+:::
 
 ### Enabling the newly created container
 Once a container has been created on the builder VM it can be copied on the production VMs (himm and the 3 GPU VMs) using a command such as rsync or scp. You can copy them on the IRIBHM mount which is shared among those 4 VMs, either in your home folder or in the shared singularity folder : `/mnt/iribhm/software/singularity`

@@ -1,4 +1,6 @@
-# Server rules
+---
+title: "Server rules"
+---
 
 - **Do not use `du` on multi-terabyte directories like `/mnt/iribhm` or directories with millions of files.** This command looks at every individual file, which is fine for up to hundreds of gigabytes, but clogs up computational resources hugely on bigger directories. It could crash the server.
 - **Regularly shut down jupyter notebooks.** When you close your browser after running a notebook on jupyterlab, the notebook is still running in the background. Go to the "Running terminals and kernels" tab (round symbol left side), and click "Shut down all".

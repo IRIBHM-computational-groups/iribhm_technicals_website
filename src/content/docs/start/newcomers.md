@@ -1,4 +1,6 @@
-## New Lab Member Onboarding Checklist
+---
+title: "New Lab Member Onboarding Checklist"
+---
 
 Here is a list of information that should be communicated to a new lab member by his/her tutor within the first weeks of his/her arrival:
 

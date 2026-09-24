@@ -1,4 +1,6 @@
-# How to public scientific code
+---
+title: "How to public scientific code"
+---
 
 TODO: zenodo and other databases
 TODO: requirements from publishers

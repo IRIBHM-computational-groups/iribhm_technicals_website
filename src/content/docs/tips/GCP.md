@@ -1,12 +1,16 @@
-# Good Computational Practices : working efficiently and reproducibly
+---
+title: "Good Computational Practices : working efficiently and reproducibly"
+---
+
 > When working in bioinformatics wrong practices can make you lose time, make other lose time or confidence in your work, or even lead to disaster. To avoid these you must adopt good habits that include making backups, versioning your code and adopting a coding style that will make it more readable for others ... or even yourself when you have to read it again a few months later. 
 
 ## Backups
 The most obvious error leading to disaster is forgetting about backups.
 
->[!WARNING]
->Please make backups !
->Please make backups !
+:::caution
+Please make backups !
+Please make backups !
+:::
 
 The obvious candidate to backup your code is git versioning because it offers several other advantages. This is described below. To backup your other files feel free to use any combination of method(s) that best suits your needs and preferences, e.g. :
 * The ULB provides 1TB of Onedrive storage and 20GB of Owncloud storage

@@ -1,4 +1,6 @@
-# Public databases
+---
+title: "Public databases"
+---
 
 As part of our work, we use several publicly accessible databases. This page has the main facts about how we use each one.
 
