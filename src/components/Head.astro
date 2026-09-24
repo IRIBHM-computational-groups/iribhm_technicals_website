@@ -11,3 +11,40 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 		location.replace(`${base}/${path}${path ? '/' : ''}`);
 	}
 </script>
+
+<!-- Markdown task lists render as disabled checkboxes. Make them tickable and
+     remember what was ticked, per page, in this browser only. -->
+<script>
+	const boxes = document.querySelectorAll(
+		'.sl-markdown-content input[type="checkbox"]'
+	) as NodeListOf<HTMLInputElement>;
+
+	if (boxes.length) {
+		const key = `checklist:${location.pathname}`;
+		let done: number[] = [];
+		try {
+			done = JSON.parse(localStorage.getItem(key) ?? '[]');
+		} catch {
+			done = [];
+		}
+
+		const save = () => {
+			try {
+				const ticked = [...boxes].flatMap((box, i) => (box.checked ? [i] : []));
+				localStorage.setItem(key, JSON.stringify(ticked));
+			} catch {
+				/* private mode, blocked storage: ticking still works for this visit */
+			}
+		};
+
+		boxes.forEach((box, i) => {
+			box.disabled = false;
+			box.checked = done.includes(i);
+			box.closest('li')?.classList.toggle('done', box.checked);
+			box.addEventListener('change', () => {
+				box.closest('li')?.classList.toggle('done', box.checked);
+				save();
+			});
+		});
+	}
+</script>

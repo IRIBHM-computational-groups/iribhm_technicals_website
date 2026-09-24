@@ -38,11 +38,12 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Tips',
+					label: 'miscellaneous',
 					items: [
-						{ label: 'Good computational practices', slug: 'tips/gcp' },
-						{ label: 'Tips and tricks', slug: 'tips/tips_and_tricks' },
-						{ label: 'Publishing scientific code', slug: 'tips/publishing_code' },
+						{ label: 'Good computational practices', slug: 'miscellaneous/gcp' },
+						{ label: 'Tips and tricks', slug: 'miscellaneous/tips_and_tricks' },
+						{ label: 'Publishing scientific code', slug: 'miscellaneous/publishing_code' },
+						{ label: 'Leaving checklist', slug: 'miscellaneous/leaving_the_lab' }
 					],
 				},
 				{

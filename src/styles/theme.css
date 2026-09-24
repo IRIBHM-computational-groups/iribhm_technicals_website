@@ -94,3 +94,86 @@
 	margin-inline-end: 0.6rem;
 	color: var(--sl-color-text-accent);
 }
+
+/* Markdown task lists: no bullet, the checkbox is the marker. */
+.sl-markdown-content ul:has(> li > input[type='checkbox']) {
+	list-style: none;
+	padding-inline-start: 0;
+}
+.sl-markdown-content li:has(> input[type='checkbox']) {
+	/* hanging indent: the checkbox sits in the margin, the text stays one block */
+	padding-inline-start: 1.75rem;
+}
+.sl-markdown-content li > input[type='checkbox'] {
+	width: 1.05em;
+	height: 1.05em;
+	margin-inline-start: -1.75rem;
+	margin-inline-end: 0.7rem;
+	vertical-align: -0.15em;
+	accent-color: var(--sl-color-accent);
+	cursor: pointer;
+}
+.sl-markdown-content li.done {
+	color: var(--sl-color-gray-3);
+}
+.sl-markdown-content li.done strong {
+	font-weight: 500;
+}
+
+/* Timeline on the "Leaving the lab" page: a line down the page with a dot per
+   milestone. Built from plain Markdown headings so the page stays editable. */
+.timeline {
+	position: relative;
+	padding-inline-start: 2.25rem;
+}
+.timeline::before {
+	content: '';
+	position: absolute;
+	inset-block: 1.6rem 1.2rem;
+	inset-inline-start: 0.4rem;
+	width: 2px;
+	border-radius: 2px;
+	background: linear-gradient(
+		to bottom,
+		#a9c800 0%,
+		var(--sl-color-gray-5) 85%,
+		transparent 100%
+	);
+}
+.sl-markdown-content .timeline h2 {
+	position: relative;
+	margin-top: 2.5rem;
+	font-size: var(--sl-text-h4);
+	line-height: 1.3;
+}
+.timeline h2::before {
+	content: '';
+	position: absolute;
+	inset-inline-start: -2.25rem;
+	top: 0.35em;
+	width: 0.9rem;
+	height: 0.9rem;
+	border-radius: 50%;
+	background: #a9c800;
+	outline: 4px solid var(--sl-color-bg);
+}
+/* The first milestone starts the line, the last one closes it. */
+.timeline h2:first-of-type::before {
+	box-shadow: 0 0 0 4px color-mix(in srgb, #a9c800 25%, transparent);
+}
+.timeline h2:last-of-type::before {
+	background: var(--sl-color-gray-4);
+}
+@media (max-width: 30rem) {
+	.timeline {
+		padding-inline-start: 1.5rem;
+	}
+	.timeline::before {
+		inset-inline-start: 0.2rem;
+	}
+	.timeline h2::before {
+		inset-inline-start: -1.5rem;
+		width: 0.7rem;
+		height: 0.7rem;
+	}
+}
